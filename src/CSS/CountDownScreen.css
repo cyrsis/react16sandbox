@@ -1,0 +1,16 @@
+.Counter {
+
+    text-align: center;
+    font-size: 35px;
+    margin-top: 20%;
+
+}
+
+.title {
+    font-size: 55px;
+}
+
+.hours, .days, .mins, .seconds {
+    display: inline;
+    margin: 10px;
+}
