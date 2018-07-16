@@ -4,8 +4,7 @@ import React from 'react'
 
 export const Person = (props) => {
     return (
-        <p>I 'am a person {props.name} and I am {props.age} years old {props.children}</p>
-
+        <p onClick={props.click}>I 'am a person {props.name} and I am {props.age} years old {props.children}</p>
 
     )
 }

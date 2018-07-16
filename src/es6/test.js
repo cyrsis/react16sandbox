@@ -1,5 +1,19 @@
-let numbers = [1, 2, 3]
+const source = [1, 5, 9, 3, 'hi', 'tb', 456, '11', 'yoyoyo'];
+let total = 0;
 
-console.log(numbers.map((x) => x*2))
+for (let i = 0; i < source.length; i++) {
+    let num = parseInt(source[i], 10);
+    if (!isNaN(num)) {
+        total += num * 2;
+    }
+}
 
-console.log(console.log(numbers))
+
+const source = [1, 5, 9, 3, 'hi', 'tb', 456, '11', 'yoyoyo'];
+
+let total = source
+    .map(x => parseInt(x, 10))
+    .filter(x => !isNaN(x))
+    .map(x => x * 2)
+    .reduce((total, value) => total + value )
+
