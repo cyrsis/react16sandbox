@@ -1,11 +1,13 @@
-let keyValue = 100;
+let uility = {
 
-function test() {
-    keyValue= 200;
-    console.log(`This is a  test`)
+     password: () => Math.random().toString(36).slice(2),
+     today: () => new Date().toDateString(),
 
 
 }
 
 
-export { test,keyValue }
+let {password, today} = Object.create(uility) ;
+
+console.log(password())
+console.log(today())
