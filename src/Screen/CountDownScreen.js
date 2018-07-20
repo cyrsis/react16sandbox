@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from '../CSS/CountDownScreen.css';
+import styles from '../css/CountDownScreen.css';
 
 class CountDownScreen extends Component {
     render() {
