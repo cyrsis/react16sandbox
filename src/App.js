@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import { Person } from "./component/Person";
+import Layout from "./component/Layout";
 
 class App extends Component {
 
@@ -13,7 +13,9 @@ class App extends Component {
 
 
             <div>
-
+                <Layout>
+                    <p>Test</p>
+                </Layout>
 
             </div>
         );

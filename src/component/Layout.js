@@ -1,6 +1,7 @@
 import React from 'react'
+import Aux from "../hoc/Util";
 
-import Aux from '../../hoc/Aux'
+
 
 //Stateless Components
 
@@ -16,7 +17,7 @@ const Layout = (props) =>
 
     )
 
-export default layout;
+export default Layout;
 
 
 
