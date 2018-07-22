@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 import Layout from "./component/Layout";
+import BurgerBuilder from "./Screen/BurgerBuilder";
 
 class App extends Component {
 
@@ -14,7 +15,7 @@ class App extends Component {
 
             <div>
                 <Layout>
-                    <p>Test</p>
+                    <BurgerBuilder/>
                 </Layout>
 
             </div>

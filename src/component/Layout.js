@@ -1,6 +1,6 @@
 import React from 'react'
 import Aux from "../hoc/Util";
-
+import cssstyle from "./Layout.css";
 
 
 //Stateless Components
@@ -11,8 +11,9 @@ const Layout = (props) =>
             <div>
                 Toolbar,SideDrawer,BackDrop
             </div>
-            < main>
-                {props.children} </main>
+            < main className={cssstyle.content}>
+                {props.children}
+            </main>
         </Aux>
 
     )
