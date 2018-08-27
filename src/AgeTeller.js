@@ -6,7 +6,11 @@ class AgeTeller extends Component {
 
     state = {
 
-        newDate: ""
+        newDate: "",
+        birthday:"1992-06-21",
+        showLogo:false
+
+
     }
 
     render() {
@@ -32,6 +36,12 @@ class AgeTeller extends Component {
 
     changeBirthday() {
         console.log(this.state)
+        this.setState({
+            birthday:this.state.newDate,
+        });
+
+        console.log(this.state)
+
     }
 }
 
