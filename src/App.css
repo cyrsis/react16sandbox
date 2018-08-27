@@ -1,21 +1,22 @@
 .App {
-  text-align: center;
-  background-color: aquamarine;
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+    background-color: aquamarine;
 }
 
-h1{
-    font-size:18px;
-    margin-bottom:20px;
+h1 {
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
-#courses{
+#courses {
     list-style: none;
     display: inline-block;
     width: 500px;
     text-align: left;
 }
 
-#courses p{
+#courses p {
     display: block;
     padding: 20px 20px;
     background-color: #C5EFF7;
@@ -26,7 +27,7 @@ h1{
     transition: 0.3s;
 }
 
-#courses p b{
+#courses p b {
     position: absolute;
     right: 30px;
     width: 100px;
@@ -34,22 +35,21 @@ h1{
     text-align: right;
 }
 
-#courses p:hover{
-    background-color:#52B3D9;
-    color:#fff;
-}
-
-#courses p.active{
-    color:#fff;
-    background-color:#446CB3;
-}
-
-#courses p.active b{
+#courses p:hover {
+    background-color: #52B3D9;
     color: #fff;
 }
 
+#courses p.active {
+    color: #fff;
+    background-color: #446CB3;
+}
 
-#total{
+#courses p.active b {
+    color: #fff;
+}
+
+#total {
     background: #3FC380 !important;
     cursor: default !important;
     padding-top: 10px !important;

@@ -5,6 +5,7 @@ import Layout from "./component/Layout";
 import BurgerBuilder from "./Screen/BurgerBuilder";
 import { Name } from "./es6/Name";
 import Person  from "./component/Person";
+import AgeTeller from "./AgeTeller";
 
 class App extends Component {
 
@@ -49,26 +50,26 @@ class App extends Component {
     render() {
         return (
             <div >
+                <AgeTeller/>
+                {/*<h1>hi, this is react</h1>*/}
+                {/*<p>This is really working?</p>*/}
+                {/*<button onClick={this.switchHandler.bind(this, "Victor")}> Switch name</button>*/}
+                {/*<Person*/}
+                    {/*name={this.state.person[0].name}*/}
+                    {/*age={this.state.person[0].age}*/}
+                    {/*Change={this.eventHandler}*/}
 
-                <h1>hi, this is react</h1>
-                <p>This is really working?</p>
-                <button onClick={this.switchHandler.bind(this, "Victor")}> Switch name</button>
-                <Person
-                    name={this.state.person[0].name}
-                    age={this.state.person[0].age}
-                    Change={this.eventHandler}
+                {/*/>*/}
 
-                />
+                {/*<Person*/}
+                    {/*name={this.state.person[1].name}*/}
+                    {/*age={this.state.person[1].age}*/}
+                {/*/>*/}
 
-                <Person
-                    name={this.state.person[1].name}
-                    age={this.state.person[1].age}
-                />
-
-                <Person
-                    name={this.state.person[2].name}
-                    age={this.state.person[2].age}
-                />
+                {/*<Person*/}
+                    {/*name={this.state.person[2].name}*/}
+                    {/*age={this.state.person[2].age}*/}
+                {/*/>*/}
 
                 {/*<Name></Name>*/}
                 {/*<Layout>*/}
