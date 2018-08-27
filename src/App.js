@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import './App.css';
+import styles from './App.css';
 import Layout from "./component/Layout";
 import BurgerBuilder from "./Screen/BurgerBuilder";
 import { Name } from "./es6/Name";
-import { Person } from "./component/Person";
+import Person  from "./component/Person";
 
 class App extends Component {
 
@@ -35,7 +35,9 @@ class App extends Component {
 
             {
                 person:[
-                    {name: event.target.value,age:22}
+                    {name: event.target.value,age:22},
+                    {name: 'Manu',age:22},
+                    {name: 'Stephine',age:22},
                 ]
             }
 
@@ -46,7 +48,7 @@ class App extends Component {
 
     render() {
         return (
-            <div>
+            <div >
 
                 <h1>hi, this is react</h1>
                 <p>This is really working?</p>
@@ -54,6 +56,8 @@ class App extends Component {
                 <Person
                     name={this.state.person[0].name}
                     age={this.state.person[0].age}
+                    Change={this.eventHandler}
+
                 />
 
                 <Person
