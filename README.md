@@ -1,5 +1,6 @@
 #List of UI element I can use
 
+
 #Material UI
  - http://blueprintjs.com/docs/
  - https://react-bootstrap.github.io/
@@ -10,8 +11,8 @@
 
 ## in webpack.config.dev.js
  - Under CSS
-  modules:true
-  localIdentName: '[name]__[local]__[hash:base64:5]'
+`  modules:true`
+` localIdentName: '[name]__[local]__[hash:base64:5]'`
 
 
 #3Check this out later
@@ -19,4 +20,3 @@ https://docs.google.com/document/d/19ZutRGjnaNQRyRhmkwNnowRTKbpKjYx9h4xtGdxNVhA/
     
 #Props tyes validation
 npm install --save prop-types
-                    

@@ -13,12 +13,17 @@ class BurgerIngredient extends Component {
             case('bread-bottom'):
                 ingredient = <div className={cssstyle.BreadBottom}></div>
                 break;
-            case ('break-top'):
-                ingredient = (<div className={cssstyle.BreadTop}>
+            case ('bread'):
+                ingredient = <div className={cssstyle.BreadTop}></div>
 
-                    <div className={cssstyle.Seeds1}></div>
-                    <div className={cssstyle.Seeds2}></div>
-                </div>)
+                break;
+            case ('bread-top'):
+                ingredient = (
+                    <div className={cssstyle.BreadTop}>
+
+                        <div className={cssstyle.Seeds1}></div>
+                        <div className={cssstyle.Seeds2}></div>
+                    </div>);
                 break;
             case ('meat'):
                 ingredient = <div className={cssstyle.Meat}>
@@ -48,11 +53,10 @@ class BurgerIngredient extends Component {
 
 }
 
-BurgerIngredient.propTypes ={
+BurgerIngredient.propTypes = {
     type: PropTypes.string.isRequired
 
 }
-
 
 
 export default BurgerIngredient;
