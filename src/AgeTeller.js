@@ -1,26 +1,37 @@
 import React, { Component } from 'react';
-import { Form, FormControl } from "react-bootstrap";
-
+import style from './AgeTeller.css'
+import { Button, Form, FormGroup, Input } from "reactstrap";
 
 class AgeTeller extends Component {
 
-    state ={
+    state = {
 
+        newDate: ""
     }
+
     render() {
         return (
-            <div>
+            <div className={style.BirthdayForm}>
 
                 <Form inline>
-
-                    <FormControl type="date" >
-                        
-                    </FormControl>
+                    <h2>Input Your Birthdaty</h2>
+                    <FormGroup>
+                        <Input onChange={event => this.setState({newDate: event.target.value})} type="date"/>
+                    </FormGroup>
+                    {''}
+                    <Button onClick={() => this.changeBirthday()}>
+                        Submit
+                    </Button>
 
                 </Form>
 
+
             </div>
         );
+    }
+
+    changeBirthday() {
+        console.log(this.state)
     }
 }
 
