@@ -52,7 +52,9 @@ class App extends Component {
             <div >
                 <AgeTeller/>
 
-                 <div className={styles.h1}> Hello world</div>
+                 <div className="h1"> Hello world</div>
+                 <div className="container bg-primary"> Hello world</div>
+                 <div className="container-fluid bg-warning"> Hello world</div>
 
 
                 {/*<h1>hi, this is react</h1>*/}
