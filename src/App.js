@@ -51,6 +51,10 @@ class App extends Component {
         return (
             <div >
                 <AgeTeller/>
+
+                 <div className={styles.h1}> Hello world</div>
+
+
                 {/*<h1>hi, this is react</h1>*/}
                 {/*<p>This is really working?</p>*/}
                 {/*<button onClick={this.switchHandler.bind(this, "Victor")}> Switch name</button>*/}
