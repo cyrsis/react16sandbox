@@ -3,11 +3,18 @@
 
 #Material UI
  - http://blueprintjs.com/docs/
- - https://react-bootstrap.github.io/
  - React date
  - Griddle
 
-#Always eject at the early stage
+# Always eject at the early stage
+
+## Working with Create React App with Bootstrap 4
+
+https://reactstrap.github.io/
+
+`npm install --save reactstrap react react-dom`
+
+ Working well and awesome 
 
 ## in webpack.config.dev.js
 `// before
