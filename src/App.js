@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ss from './App.css';
 import Person from "./component/Person";
+import Radium from 'radium';
 
 
 class App extends Component {
@@ -70,15 +71,7 @@ class App extends Component {
     }
 
     render() {
-        const style = {
-            backgroundColor: 'green',
-            color:'white',
-            font: 'inherit',
-            border: '1px solid blue',
-            padding: '8px',
-            cursor: 'pointer'
-        };
-
+        
         let persons = null; //Create variable is more fun
 
         if (this.state.showPersons) {
@@ -98,7 +91,11 @@ class App extends Component {
                 </div>
             );
 
-            style.backgroundColor = "red" //Dynamic Style for the react
+            localstyle.backgroundColor = "red" //Dynamic Style for the react
+            localstyle[':hover'] ={
+                backgroundColor:'salmon',
+                color:'black'
+            }
         }
 
         let redbold = ['red','bold'].join(' ');
@@ -106,10 +103,10 @@ class App extends Component {
 
         let styleColod = []
         if (this.state.persons.length <=2) {
-         styleColod.push('red')
+         styleColod.push(ss.red)
         }
         if (this.state.persons.length<=1) {
-            styleColod.push('bold')
+            styleColod.push(ss.bold)
         }
 
         styleColod.join(' ')
@@ -117,9 +114,9 @@ class App extends Component {
         return (
             <div className={ss.App}>
                 <h1>Hi, I'm a React App</h1>
-                <p className={ss.redbold}>This is really working!</p>
+                <p className={styleColod.join(' ')}>This is really working!</p>
                 <button
-                    style={style}
+                    style={localstyle}
                     onClick={this.togglePersonsHandler}>Toggle Persons
                 </button>
                 {persons}
