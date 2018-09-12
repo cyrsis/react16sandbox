@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import ss from './App.css';
 import Person from "./component/Person";
 
 
@@ -29,10 +29,10 @@ class App extends Component {
     nameChangedHandler = (event, id) => {
 
         const personIndex = this.state.persons.findIndex((p) => {
-         return p.id === id;
+            return p.id === id;
         })
 
-          // const changePerson = this.state.persons[personIndex]; //Dont change the object itself directly
+        // const changePerson = this.state.persons[personIndex]; //Dont change the object itself directly
 
         const changePerson = {
             ...this.state.persons[personIndex]
@@ -71,18 +71,17 @@ class App extends Component {
 
     render() {
         const style = {
-            backgroundColor: 'white',
+            backgroundColor: 'green',
+            color:'white',
             font: 'inherit',
             border: '1px solid blue',
             padding: '8px',
             cursor: 'pointer'
         };
 
-        let persons = null;
+        let persons = null; //Create variable is more fun
 
         if (this.state.showPersons) {
-
-
             persons = (
                 <div>
                     {
@@ -98,12 +97,27 @@ class App extends Component {
                     }
                 </div>
             );
+
+            style.backgroundColor = "red" //Dynamic Style for the react
         }
 
+        let redbold = ['red','bold'].join(' ');
+        console.log(redbold)
+
+        let styleColod = []
+        if (this.state.persons.length <=2) {
+         styleColod.push('red')
+        }
+        if (this.state.persons.length<=1) {
+            styleColod.push('bold')
+        }
+
+        styleColod.join(' ')
+
         return (
-            <div className="App">
+            <div className={ss.App}>
                 <h1>Hi, I'm a React App</h1>
-                <p>This is really working!</p>
+                <p className={ss.redbold}>This is really working!</p>
                 <button
                     style={style}
                     onClick={this.togglePersonsHandler}>Toggle Persons
