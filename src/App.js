@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import ss from './App.css';
 import Person from "./component/Person";
-import Radium from 'radium';
+import ErrorBoundary from "./component/ErrorBoundary";
 
+//Using CSS Modules
 
 class App extends Component {
     state = {
@@ -57,6 +58,7 @@ class App extends Component {
         const doesShow = this.state.showPersons;
         this.setState({showPersons: !doesShow});
         console.log(this.state.showPersons)
+
     }
     deletePersonHandler = (personIndex) => {
         // const person = this.state.persons.slice(); //slice without arg simply call a array
@@ -71,7 +73,9 @@ class App extends Component {
     }
 
     render() {
-        
+
+        let btnClass = '' ;
+
         let persons = null; //Create variable is more fun
 
         if (this.state.showPersons) {
@@ -91,35 +95,36 @@ class App extends Component {
                 </div>
             );
 
-            localstyle.backgroundColor = "red" //Dynamic Style for the react
-            localstyle[':hover'] ={
-                backgroundColor:'salmon',
-                color:'black'
-            }
+          btnClass = ss.red;
+            //console.log(`btn Class`+ {btnClass})
+
         }
 
-        let redbold = ['red','bold'].join(' ');
-        console.log(redbold)
+        // let redbold = ['red', 'bold'].join(' ');
+        //console.log(redbold)
 
         let styleColod = []
-        if (this.state.persons.length <=2) {
-         styleColod.push(ss.red)
+        if (this.state.persons.length <= 2) {
+            styleColod.push(ss.red)
         }
-        if (this.state.persons.length<=1) {
+        if (this.state.persons.length <= 1) {
             styleColod.push(ss.bold)
         }
 
-        styleColod.join(' ')
 
         return (
-            <div className={ss.App}>
-                <h1>Hi, I'm a React App</h1>
-                <p className={styleColod.join(' ')}>This is really working!</p>
-                <button
-                    style={localstyle}
-                    onClick={this.togglePersonsHandler}>Toggle Persons
-                </button>
-                {persons}
+            <div>
+                <ErrorBoundary>
+                <div className={ss.App}>
+                    <h1>Hi, I'm a React App</h1>
+                    <p className={styleColod.join(' ')}>This is really working!</p>
+                    <button
+                        className={btnClass}
+                        onClick={this.togglePersonsHandler}>Toggle Person
+                    </button>
+                    {persons}
+                </div>
+                </ErrorBoundary>
             </div>
         );
         // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
